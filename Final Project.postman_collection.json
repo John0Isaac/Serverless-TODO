@@ -24,12 +24,12 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/todos",
+							"raw": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/todos",
 							"protocol": "https",
 							"host": [
 								"{{apiId}}",
 								"execute-api",
-								"us-east-1",
+								"us-east-2",
 								"amazonaws",
 								"com"
 							],
@@ -63,12 +63,12 @@
 							"raw": "{\n\t\"name\": \"Water flowers\",\n\t\"dueDate\": \"2019-06-11\"\n}"
 						},
 						"url": {
-							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/todos",
+							"raw": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/todos",
 							"protocol": "https",
 							"host": [
 								"{{apiId}}",
 								"execute-api",
-								"us-east-1",
+								"us-east-2",
 								"amazonaws",
 								"com"
 							],
@@ -102,12 +102,12 @@
 							"raw": "{\n\t\"name\": \"Change the world\",\n\t\"dueDate\": \"2019-12-11\",\n\t\"done\": true\n}"
 						},
 						"url": {
-							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/todos/35dd600f-43c2-4649-903c-615e1586a26f",
+							"raw": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/todos/35dd600f-43c2-4649-903c-615e1586a26f",
 							"protocol": "https",
 							"host": [
 								"{{apiId}}",
 								"execute-api",
-								"us-east-1",
+								"us-east-2",
 								"amazonaws",
 								"com"
 							],
@@ -142,12 +142,12 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/todos/fe671583-4512-45f6-9475-4265c04362fb",
+							"raw": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/todos/fe671583-4512-45f6-9475-4265c04362fb",
 							"protocol": "https",
 							"host": [
 								"{{apiId}}",
 								"execute-api",
-								"us-east-1",
+								"us-east-2",
 								"amazonaws",
 								"com"
 							],
@@ -176,12 +176,12 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/todos/3836b777-9bc4-4429-9b79-ba4e4f5f91c0/attachment",
+							"raw": "https://{{apiId}}.execute-api.us-east-2.amazonaws.com/dev/todos/3836b777-9bc4-4429-9b79-ba4e4f5f91c0/attachment",
 							"protocol": "https",
 							"host": [
 								"{{apiId}}",
 								"execute-api",
-								"us-east-1",
+								"us-east-2",
 								"amazonaws",
 								"com"
 							],
@@ -246,13 +246,13 @@
 		{
 			"id": "bf208e6b-f66d-4008-9366-dd541ff65425",
 			"key": "apiId",
-			"value": "",
+			"value": "j97v0zfcf7",
 			"type": "string"
 		},
 		{
 			"id": "9bc6399a-d2bb-4f2d-9ffa-8480370d383c",
 			"key": "authToken",
-			"value": "",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik96Q3Z3NHhjWEl0X3NWVllmTGs4byJ9.eyJpc3MiOiJodHRwczovL2Nvbm5lY3Qtc2Vzc2lvbi10ZXN0LnVzLmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwMzY0MDgyNDIwMTU5NDYzMDE4MSIsImF1ZCI6IlFCOTF4cFhrZzlUQ0lGWkR4TU1oczlGUFYwUThtVUNjIiwiaWF0IjoxNjY2MTQ1ODU4LCJleHAiOjE2NjYxODE4NTgsImF0X2hhc2giOiJfX3ljLTMtMXMxVDkwc3Y3Z3l5bjlnIiwic2lkIjoiTkhZbEtpOUF4WEF1MWwwZFJHTjRRa3kza2F0SS1QWEgiLCJub25jZSI6ImxlcGpaY05pakxzMHV-dmVCbEFEcDZOdTRnfmsyM3VqIn0.gJ-acEcStk9a8ax-RqNVSgP8r8Tvl0gn9x8SDxWWKWPJsAEVygfWd9a9ZiR6WpezYJPWTgAaC9_nLKGdo9j91RxvYSG6SMtjX_aGuLmSuBGmwbo3WnnvjnueW8QO71qSZHChLtg2ZSMrMkHgKHvgJYuwYdyQL_b5z8nE7gZ8vzhr5iA6iIWjBPoXbhkpMyWoT-pEjDZ-dl-TOffsuKKJKiHrhgoC5j0on_8s3zftpxiGmiqbX5EYXEFiJFcJ0AOLbqmX6Fm5GcJLtmwWsGqhi3wDjLAT_bZ6ygYA9bjgo2qlFY25N_ZnBCLUBYHcsXb3kRY2tNnU-hRYZ1VdfQG_JQ",
 			"type": "string"
 		}
 	]
