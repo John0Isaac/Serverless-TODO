@@ -1,7 +1,7 @@
 import {APIGatewayProxyEvent, APIGatewayProxyHandler, APIGatewayProxyResult} from 'aws-lambda'
 import 'source-map-support/register'
 import { CreateTodoRequest } from '../../requests/CreateTodoRequest'
-import { createToDo } from '../../logic/ToDo'
+import { createToDo } from '../../businesslogic/ToDo'
 
 export const handler: APIGatewayProxyHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
   // TODO: Implement creating a new TODO item

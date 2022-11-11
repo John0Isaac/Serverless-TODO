@@ -3,9 +3,9 @@ import {parseUserId} from "../auth/utils";
 import {CreateTodoRequest} from "../requests/CreateTodoRequest";
 import {UpdateTodoRequest} from "../requests/UpdateTodoRequest";
 import {updateTodo} from "../models/updateTodo";
-import {todoDataAccess} from "../data/todoData";
+import {todoDataAccess} from "../dataLayer/todoData";
+import { v4 as uuidv4 } from 'uuid';
 
-const uuidv4 = require('uuid/v4');
 const todoData = new todoDataAccess();
 
 export async function getAllToDo(jwtToken: string): Promise<createTodo[]> {
