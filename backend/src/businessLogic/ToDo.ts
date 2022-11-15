@@ -21,7 +21,7 @@ export function createToDo(createTodoRequest: CreateTodoRequest, jwtToken: strin
     const todoId =  uuidv4();
     const s3BucketName = process.env.S3_BUCKET_NAME;
     logger.info(`Creating todo`);
-    return todoData.createToDo({
+    return todoData.createToDos({
         userId: userId,
         todoId: todoId,
         attachmentUrl:  `https://${s3BucketName}.s3.amazonaws.com/${todoId}`, 

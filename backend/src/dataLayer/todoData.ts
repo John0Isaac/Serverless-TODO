@@ -1,13 +1,12 @@
 import * as AWS from 'aws-sdk'
 import { DocumentClient } from 'aws-sdk/clients/dynamodb'
-import * as AWSXRay from 'aws-xray-sdk'
 import { Types } from 'aws-sdk/clients/s3';
 import { createTodo } from "../models/createTodo";
 import { updateTodo } from "../models/updateTodo";
 import { createLogger } from '../utils/logger'
 
 const logger = createLogger('todosAccess');
-
+const AWSXRay = require('aws-xray-sdk');
 const XAWS = AWSXRay.captureAWS(AWS);
 
 export class todoDataAccess {
@@ -39,7 +38,7 @@ export class todoDataAccess {
         return items as createTodo[];
     }
 
-    async createToDo(createTodo: createTodo): Promise<createTodo> {
+    async createToDos(createTodo: createTodo): Promise<createTodo> {
         logger.info("Creating new todo");
 
         const params = {
