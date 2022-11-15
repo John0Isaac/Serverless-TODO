@@ -27,7 +27,7 @@ provider:
   environment:
     PROJECT_NAME: todo-app
     TODOS_TABLE: Todos-${self:provider.stage}
-    S3_BUCKET_NAME: serverless-c4-todo-images-530638009034
+    S3_BUCKET_NAME: serverless-c4-todo-images-530638005478
   
 custom:
   documentaion:
