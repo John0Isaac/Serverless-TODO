@@ -1,20 +1,25 @@
-import * as AWS from "aws-sdk";
-import { DocumentClient } from "aws-sdk/clients/dynamodb";
+import * as AWS from 'aws-sdk'
+import { DocumentClient } from 'aws-sdk/clients/dynamodb'
+import * as AWSXRay from 'aws-xray-sdk'
 import { Types } from 'aws-sdk/clients/s3';
 import { createTodo } from "../models/createTodo";
 import { updateTodo } from "../models/updateTodo";
+import { createLogger } from '../utils/logger'
 
+const logger = createLogger('todosAccess');
+
+const XAWS = AWSXRay.captureAWS(AWS);
 
 export class todoDataAccess {
     constructor(
-        private readonly docClient: DocumentClient = new AWS.DynamoDB.DocumentClient(),
-        private readonly s3Client: Types = new AWS.S3({ signatureVersion: 'v4' }),
+        private readonly docClient: DocumentClient = new XAWS.DynamoDB.DocumentClient(),
+        private readonly s3Client: Types = new XAWS.S3({ signatureVersion: 'v4' }),
         private readonly todoTable = process.env.TODOS_TABLE,
         private readonly s3BucketName = process.env.S3_BUCKET_NAME) {
     }
 
     async getAllToDo(userId: string): Promise<createTodo[]> {
-        console.log("Getting all todo");
+        logger.info(`Getting all todos for user`);
 
         const params = {
             TableName: this.todoTable,
@@ -28,14 +33,14 @@ export class todoDataAccess {
         };
 
         const result = await this.docClient.query(params).promise();
-        console.log(result);
+        
         const items = result.Items;
-
+        logger.info(items.length);
         return items as createTodo[];
     }
 
     async createToDo(createTodo: createTodo): Promise<createTodo> {
-        console.log("Creating new todo");
+        logger.info("Creating new todo");
 
         const params = {
             TableName: this.todoTable,
@@ -49,7 +54,7 @@ export class todoDataAccess {
     }
 
     async updateToDo(updateTodo: updateTodo, todoId: string, userId: string): Promise<updateTodo> {
-        console.log("Updating todo");
+        logger.info("Updating todo");
 
         const params = {
             TableName: this.todoTable,
@@ -79,7 +84,7 @@ export class todoDataAccess {
     }
 
     async deleteToDo(todoId: string, userId: string): Promise<string> {
-        console.log("Deleting todo");
+        logger.info("Deleting todo");
 
         const params = {
             TableName: this.todoTable,
@@ -96,7 +101,7 @@ export class todoDataAccess {
     }
 
     async generateUploadUrl(todoId: string): Promise<string> {
-        console.log("Generating URL");
+        logger.info("Generating URL");
 
         const url = this.s3Client.getSignedUrl('putObject', {
             Bucket: this.s3BucketName,
